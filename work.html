@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build Log — Cipher PR</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<div id="falling3DLayer" aria-hidden="true"></div>
+<div id="cursorLight" aria-hidden="true"></div>
+
+<div id="boot-screen">
+  <div class="boot-window" id="boot-text"></div>
+</div>
+
+<div id="route-transition">
+  <div class="box" id="route-transition-text"></div>
+</div>
+
+<nav>
+  <a class="brand" href="index.html">cipherpr<span class="dot">.</span>tech</a>
+  <div class="links">
+    <a href="https://cipherpr.me">home</a>
+    <a href="services.html">services</a>
+    <a href="work.html" class="active">work</a>
+    <a href="blog.html">blog</a>
+    <a href="collaborate.html" class="cta">collaborate</a>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="eyebrow">// build log</div>
+  <h1>Things I've built.</h1>
+  <p>Not a client-work showcase — this is the engineering side. What got built, what broke, what I'd do differently next time.</p>
+</header>
+
+<section class="editorial tight">
+  <a class="case-study" href="https://lasuconnect.cipherpr.live">
+    <div>
+      <div class="client-tag">LASU Connect</div>
+      <h3>Campus platform, built solo</h3>
+      <p>Node.js/Express backend, Socket.io for real-time features, MongoDB/Mongoose for data, React/TypeScript frontend. The biggest lesson: real-time features are easy to demo and hard to keep consistent once more than a few users are connected at once — most of the later iteration went into making Socket.io state actually reliable, not into new features.</p>
+      <div class="stat-row">
+        <div class="stat"><b>Node.js</b>backend</div>
+        <div class="stat"><b>Socket.io</b>real-time</div>
+      </div>
+    </div>
+    <div class="visual">lasuconnect.cipherpr.live</div>
+  </a>
+
+  <a class="case-study" href="#">
+    <div>
+      <div class="client-tag">Project-NODE</div>
+      <h3>Contributed, not solo-built</h3>
+      <p>Working inside someone else's codebase taught a different set of lessons than building from scratch — reading conventions before writing code, and how much slower (but more durable) good code review makes a team move.</p>
+      <div class="stat-row">
+        <div class="stat"><b>Team</b>project</div>
+        <div class="stat"><b>Contributor</b>role</div>
+      </div>
+    </div>
+    <div class="visual">preview coming soon</div>
+  </a>
+
+  <a class="case-study" href="https://fullmidnightshutdown.cipherpr.live">
+    <div>
+      <div class="client-tag">Full Midnight Shutdown</div>
+      <h3>Event site — checkout under real pressure</h3>
+      <p>Live ticket counts backed by Supabase, tiered pricing, Paystack inline checkout. Built knowing it had to hold up on one specific night with real money moving through it — different discipline than a portfolio project that never has to be right under load.</p>
+      <div class="stat-row">
+        <div class="stat"><b>Supabase</b>live data</div>
+        <div class="stat"><b>Paystack</b>checkout</div>
+      </div>
+    </div>
+    <div class="visual">event site preview</div>
+  </a>
+
+  <a class="case-study" href="#">
+    <div>
+      <div class="client-tag">Smaller builds</div>
+      <h3>Everything else along the way</h3>
+      <p>A handful of smaller sites and tools that don't need their own full write-up yet, but each one taught something specific — worth a page each eventually.</p>
+      <div class="stat-row">
+        <div class="stat"><b>—</b>more soon</div>
+      </div>
+    </div>
+    <div class="visual">index growing</div>
+  </a>
+</section>
+
+<section class="collab-cta">
+  <div class="eyebrow">// collaborate</div>
+  <h2>Have something worth building?</h2>
+  <p>This is the kind of work that ends up on this page — tell me what you're working on.</p>
+  <a class="primary-cta" href="collaborate.html"><i data-lucide="send"></i> Start a conversation</a>
+</section>
+
+<footer>
+  <div>© 2026 Cipher PR · Daniel Savior Ozoemena · itz.sCipher</div>
+  <div class="socials">
+    <a href="https://twitter.com/itz_sCipher"><i data-lucide="twitter"></i></a>
+    <a href="https://github.com/Cipher-PR"><i data-lucide="github"></i></a>
+    <a href="mailto:ozoemenad4@gmail.com"><i data-lucide="mail"></i></a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/zdog@1.1.3/dist/zdog.dist.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="shared.js"></script>
+<script>
+  lucide.createIcons();
+  initBoot('~/cipherpr.tech/work');
+  initNavTransition();
+  window.addEventListener('load', function(){ initInteractive3D(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Cipher PR</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<div id="falling3DLayer" aria-hidden="true"></div>
+<div id="cursorLight" aria-hidden="true"></div>
+
+<div id="boot-screen">
+  <div class="boot-window" id="boot-text"></div>
+</div>
+
+<div id="route-transition">
+  <div class="box" id="route-transition-text"></div>
+</div>
+
+<nav>
+  <a class="brand" href="index.html">cipherpr<span class="dot">.</span>tech</a>
+  <div class="links">
+    <a href="https://cipherpr.me">home</a>
+    <a href="services.html">services</a>
+    <a href="work.html">work</a>
+    <a href="blog.html" class="active">blog</a>
+    <a href="collaborate.html" class="cta">collaborate</a>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="eyebrow">// blog</div>
+  <h1>Notes from the build.</h1>
+  <p>PR strategy, web dev, and whatever's actually happening on current projects — written up as it happens.</p>
+</header>
+
+<section class="editorial tight">
+  <div class="blog-grid">
+    <a class="blog-card" href="#">
+      <div class="meta">Sponsorship · sample post</div>
+      <div class="title">What running six sponsor conversations at once taught me</div>
+      <div class="excerpt">Notes on parallel outreach instead of sequential pitching, from the FMS sponsorship push.</div>
+      <div class="read-more">Read more →</div>
+    </a>
+    <a class="blog-card" href="#">
+      <div class="meta">Web dev · sample post</div>
+      <div class="title">Why the checkout flow is the actual product</div>
+      <div class="excerpt">On building live ticket counts that don't lie to the buyer, and why Paystack's inline flow beats a redirect.</div>
+      <div class="read-more">Read more →</div>
+    </a>
+    <a class="blog-card" href="#">
+      <div class="meta">Brand · sample post</div>
+      <div class="title">Two identities, one builder — how the domain split actually works</div>
+      <div class="excerpt">Why cipherpr.me, cipherpr.tech, and cipherpr.live are three different jobs, not three different people.</div>
+      <div class="read-more">Read more →</div>
+    </a>
+    <a class="blog-card" href="#">
+      <div class="meta">PR · sample post</div>
+      <div class="title">The backup-prospect problem in event sponsorship</div>
+      <div class="excerpt">Running backups at low intensity instead of sequentially — what that actually looks like week to week.</div>
+      <div class="read-more">Read more →</div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Cipher PR · Daniel Savior Ozoemena · itz.sCipher</div>
+  <div class="socials">
+    <a href="https://twitter.com/itz_sCipher"><i data-lucide="twitter"></i></a>
+    <a href="https://github.com/Cipher-PR"><i data-lucide="github"></i></a>
+    <a href="mailto:ozoemenad4@gmail.com"><i data-lucide="mail"></i></a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/zdog@1.1.3/dist/zdog.dist.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="shared.js"></script>
+<script>
+  lucide.createIcons();
+  initBoot('~/cipherpr.tech/blog');
+  initNavTransition();
+  window.addEventListener('load', function(){ initInteractive3D(); });
+</script>
+</body>
+</html>
